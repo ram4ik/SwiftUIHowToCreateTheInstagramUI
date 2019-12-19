@@ -7,7 +7,7 @@ struct StoriesView: View {
             HStack {
                 Text("Stories")
                 Spacer()
-                Image("Watch")
+                Image(systemName: "play")
                 Text("Watch all")
             }
             
@@ -17,7 +17,8 @@ struct StoriesView: View {
                         ZStack(alignment: .bottomTrailing) {
                             Image("AvatarBig")
                             .cornerRadius(40)
-                            Image("Add")
+                            Image(systemName: "plus.circle.fill")
+                                .foregroundColor(.blue)
                         }
                         Text("Your Story")
                             .font(Font.system(size: 13.5))

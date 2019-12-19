@@ -14,7 +14,8 @@ struct PostCell: View {
                     .font(Font.system(size: 11.5))
                 }
                 Spacer()
-                Image("More")
+                Image(systemName: "ellipsis")
+                    //.font(.title)
             }
             
             //Post
@@ -26,11 +27,15 @@ struct PostCell: View {
             
             //Horizontal bar
             HStack(alignment: .center) {
-                Image("Like")
-                Image("Comment")
-                Image("Send")
+                Image(systemName: "suit.heart")
+                    .font(.system(size: 20))
+                Image(systemName: "message")
+                    .rotation3DEffect(.degrees(180), axis: (x: 0, y: 180, z: 0))
+                Image(systemName: "paperplane")
+                    .font(.system(size: 20))
                 Spacer()
-                Image("Collect")
+                Image(systemName: "paperplane")
+                    .font(.system(size: 20))
             }
             
             //Number of likes

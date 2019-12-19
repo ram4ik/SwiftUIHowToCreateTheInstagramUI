@@ -10,7 +10,7 @@ struct ContentView: View {
                 PostCell()
             }
             .navigationBarTitle("Instagram", displayMode: .inline)
-        .navigationBarItems(leading: Image("Camera"), trailing: Image("Direct"))
+            .navigationBarItems(leading: Image(systemName: "camera"), trailing: Image(systemName: "paperplane"))
         }
     }
 }
