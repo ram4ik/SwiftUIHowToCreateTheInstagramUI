@@ -1,16 +1,17 @@
-//
-//  ContentView.swift
-//  SwiftUIHowToCreateTheInstagramUI
-//
-//  Created by ramil on 19.12.2019.
-//  Copyright © 2019 com.ri. All rights reserved.
-//
-
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        NavigationView {
+            List {
+                StoriesView()
+                PostCell()
+                PostCell()
+                PostCell()
+            }
+            .navigationBarTitle("Instagram", displayMode: .inline)
+        .navigationBarItems(leading: Image("Camera"), trailing: Image("Direct"))
+        }
     }
 }
 
